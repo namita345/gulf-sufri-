@@ -17,9 +17,19 @@ export default function Home() {
 <a className="btn gold big" href="#contact">Get Started <i>→</i></a>
 <a className="story" href="#services"><b>▶</b> See What We Do</a>
 </div>
+<div className="hero-technologies" aria-label="Technology we work with">
+  <p className="hero-technologies-label">Technology We Work With</p>
+  <div className="hero-technology-logos">
+    <div className="tech-logo tech-meta" title="Meta"><svg viewBox="0 0 34 23" aria-hidden="true"><path d="M2 16C4 8 7 3 11 3c6 0 8 16 13 16 4 0 8-5 8-10 0-5-3-7-7-7-6 0-10 8-14 15C8 22 3 22 2 16Z" fill="none" stroke="#2689ff" strokeWidth="3.3" strokeLinecap="round"/></svg><span>Meta</span></div>
+    <div className="tech-logo tech-google" title="Google"><span className="google-wordmark"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span></div>
+    <div className="tech-logo tech-openai" title="OpenAI"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" strokeWidth="2.15" strokeLinejoin="round"><path d="M15.5 3.2c4.4-3 10.2.5 10.1 5.8 4.8 2.2 5.2 8.9.7 11.8.6 5.4-5.2 8.9-9.8 6.4-4.4 3-10.1-.4-10.1-5.6-4.9-2.2-5.3-8.9-.7-11.8-.6-5.4 5.2-8.9 9.8-6.4Z"/><path d="M16 7.1 24 12v9.3l-8 4.6-8-4.6V12Z"/><path d="m8 12 8 4.7 8-4.7M16 16.7v9.2"/></g></svg><span>OpenAI</span></div>
+    <div className="tech-logo tech-cloudflare" title="Cloudflare"><svg viewBox="0 0 42 27" aria-hidden="true"><path fill="#f48120" d="M12 22h23a6 6 0 0 0 .1-12 10 10 0 0 0-19.3-2.1A8 8 0 0 0 12 22Z"/><path fill="#faae40" d="M4 23h27a5 5 0 0 0-4-8 8 8 0 0 0-15-1A6 6 0 0 0 4 23Z"/></svg><span>Cloudflare</span></div>
+    <div className="tech-logo tech-github" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.07c-3.1.68-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.67.08-.67 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.59 1.2 3.22.92.1-.72.39-1.2.71-1.47-2.48-.28-5.09-1.24-5.09-5.49 0-1.21.43-2.2 1.14-2.97-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.52.22 2.64.11 2.92.71.77 1.14 1.76 1.14 2.97 0 4.26-2.61 5.2-5.1 5.48.4.35.75 1.04.75 2.1V22c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub</span></div>
+  </div>
+</div>
 </div>
 <div className="sufri-hero">
-<img alt="Sufri, GulfSufra's digital host" src="/assets/sufri.png"/>
+<img alt="Sufri, GulfSufra's digital host" src="/assets/sufri.webp"/>
 <div className="bubble">
 <strong>Ahlan, Habibi. I’m Sufri.</strong><br/>
       Welcome to GulfSufra!<br/>
@@ -38,11 +48,11 @@ export default function Home() {
 <div className="services-stage">
 <div aria-live="polite" className="sufri-host">
 <div className="sufri-poses">
-<img alt="Sufri" className="sufri-pose pose-neutral active" src="/assets/sufri-neutral.png"/>
-<img alt="Sufri showing a restaurant website" className="sufri-pose pose-website" src="/assets/sufri-website.png"/>
-<img alt="Sufri showing a digital menu" className="sufri-pose pose-menu" src="/assets/sufri-menu.png"/>
-<img alt="Sufri showing social media" className="sufri-pose pose-social" src="/assets/sufri-social.png"/>
-<img alt="Sufri showing Google Business" className="sufri-pose pose-google" src="/assets/sufri-google.png"/>
+<img alt="Sufri" className="sufri-pose pose-neutral active" src="/assets/sufri-neutral.webp"/>
+<img alt="Sufri showing a restaurant website" className="sufri-pose pose-website" src="/assets/sufri-website.webp"/>
+<img alt="Sufri showing a digital menu" className="sufri-pose pose-menu" src="/assets/sufri-menu.webp"/>
+<img alt="Sufri showing social media" className="sufri-pose pose-social" src="/assets/sufri-social.webp"/>
+<img alt="Sufri showing Google Business" className="sufri-pose pose-google" src="/assets/sufri-google.webp"/>
 </div>
 <div className="sufri-bubble"><strong>Pick a service, Habibi.</strong><br/>I'll show you what we can do.</div>
 </div>
@@ -53,7 +63,7 @@ export default function Home() {
 <span>Your restaurant deserves a website as good as the experience inside.</span>
 <a href="#contact">Build My Website <i>→</i></a>
 </div>
-<div className="card-visual"><img alt="Restaurant website example" src="/assets/website-mockup.png"/></div>
+<div className="card-visual"><img alt="Restaurant website example" src="/assets/website-mockup.webp"/></div>
 <div className="card-body"><span className="card-number">01</span><h3>Restaurant Websites</h3><p>Beautiful, modern websites that turn your restaurant into a destination.</p><span className="card-arrow">→</span></div>
 </article>
 <article className="service-card" data-service="menu">
@@ -62,7 +72,7 @@ export default function Home() {
 <span>Give every guest a fast, beautiful menu they can open anywhere.</span>
 <a href="#contact">Get My Digital Menu <i>→</i></a>
 </div>
-<div className="card-visual"><img alt="Digital menu example" src="/assets/menu-mockup.png"/></div>
+<div className="card-visual"><img alt="Digital menu example" src="/assets/menu-mockup.webp"/></div>
 <div className="card-body"><span className="card-number">02</span><h3>Digital Menus</h3><p>Interactive menus that look great, load fast and stay easy to update.</p><span className="card-arrow">→</span></div>
 </article>
 <article className="service-card" data-service="social">
@@ -71,7 +81,7 @@ export default function Home() {
 <span>Let's make sure people stop scrolling and start craving.</span>
 <a href="#contact">Grow My Social <i>→</i></a>
 </div>
-<div className="card-visual"><img alt="Restaurant social media example" src="/assets/social-mockup.png"/></div>
+<div className="card-visual"><img alt="Restaurant social media example" src="/assets/social-mockup.webp"/></div>
 <div className="card-body"><span className="card-number">03</span><h3>Social Media</h3><p>Content that makes people stop scrolling and start talking about your food.</p><span className="card-arrow">→</span></div>
 </article>
 <article className="service-card" data-service="google">
@@ -80,7 +90,7 @@ export default function Home() {
 <span>Show up when hungry customers are looking for somewhere to eat.</span>
 <a href="#contact">Improve My Google Presence <i>→</i></a>
 </div>
-<div className="card-visual google-card-visual"><div className="google-mini"><b>G</b><strong>Your Restaurant</strong><span>4.8 ★★★★★</span><small>Restaurant · Open</small><div><em>⌖ Directions</em><em>⌕ Call</em><em>♡ Save</em></div></div></div>
+<div className="card-visual"><img alt="Google Business profile example" src="/assets/google-business-mockup.webp"/></div>
 <div className="card-body"><span className="card-number">04</span><h3>Google Business</h3><p>Get found, build trust and bring more diners through your doors.</p><span className="card-arrow">→</span></div>
 </article>
 </div>
@@ -105,7 +115,7 @@ export default function Home() {
 </div>
 <div className="why-gulfsufra-art">
 <div className="why-sufri-wrap">
-<img alt="Sufri presenting a restaurant website on a laptop" src="/assets/sufri-why-laptop-carpet.png"/>
+<img alt="Sufri presenting a restaurant website on a laptop" src="/assets/sufri-why-laptop-carpet.webp"/>
 <div className="why-sufri-bubble"><strong>I’ve worked with many<br/>restaurants like yours.</strong><span>I know what works!</span></div>
 </div>
 </div>
@@ -125,19 +135,19 @@ export default function Home() {
 </div>
 <div className="how-steps">
 <article className="how-step">
-<div className="how-step-media"><div className="how-speech">First, tell me about your restaurant!</div><img alt="Welcoming Sufri inviting restaurant owners to get started" src="/assets/sufri-neutral.png"/></div>
 <span className="how-step-number">01</span>
-<div className="how-step-body"><span aria-hidden="true" className="how-step-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 5.5h14v9H8l-3 3v-12Z"></path><path d="M8 9h8M8 12h5"></path></svg></span><h3>Tell Us About<br/>Your Restaurant</h3><p>We learn about your restaurant, your goals, your customers and what you need.</p></div>
+<div className="how-step-media"><div className="how-speech">First, tell me about your restaurant!</div><img alt="Welcoming Sufri inviting restaurant owners to get started" src="/assets/sufri-neutral.webp"/></div>
+<div className="how-step-body"><h3>Tell Us About<br/>Your Restaurant</h3><p>We learn about your restaurant, your goals, your customers and what you need.</p></div>
 </article>
 <article className="how-step">
-<div className="how-step-media"><div className="how-speech">Leave the digital side to me.</div><img alt="Sufri presenting a restaurant website and digital setup" src="/assets/sufri-website.png"/></div>
 <span className="how-step-number">02</span>
-<div className="how-step-body"><span aria-hidden="true" className="how-step-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19 12a7 7 0 0 0-.2-1.7l1.6-1.2-1.7-2.9-1.9.8A7 7 0 0 0 15.3 6L15 4h-3l-.3 2a7 7 0 0 0-1.5 1l-1.9-.8-1.7 2.9 1.6 1.2A7 7 0 0 0 8 12c0 .6.1 1.2.2 1.7l-1.6 1.2 1.7 2.9 1.9-.8a7 7 0 0 0 1.5 1l.3 2h3l.3-2a7 7 0 0 0 1.5-1l1.9.8 1.7-2.9-1.6-1.2c.1-.5.2-1.1.2-1.7Z"></path></svg></span><h3>We Build &amp; Set<br/>Everything Up</h3><p>Website, menu, social presence, Google Business and whatever else your restaurant needs.</p></div>
+<div className="how-step-media"><div className="how-speech">Leave the digital side to me.</div><img alt="Sufri presenting a restaurant website and digital setup" src="/assets/sufri-website.webp"/></div>
+<div className="how-step-body"><h3>We Build &amp; Set<br/>Everything Up</h3><p>Website, menu, social presence, Google Business and whatever else your restaurant needs.</p></div>
 </article>
 <article className="how-step">
-<div className="how-step-media"><div className="how-speech">You focus on the food. I’ll handle the rest!</div><img alt="Confident Sufri showing that the digital side is taken care of" src="/assets/sufri-approval.png"/></div>
 <span className="how-step-number">03</span>
-<div className="how-step-body"><span aria-hidden="true" className="how-step-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 11.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM16.5 12.5a3 3 0 1 0 0-6M3.5 20c.5-3 2.2-5 4.5-5s4 2 4.5 5M13 20c.4-2.2 1.7-3.7 3.5-3.7 2 0 3.2 1.5 3.8 3.7"></path></svg></span><h3>You Focus on<br/>the Food</h3><p>We keep your digital presence looking good, working properly and ready to bring you more customers.</p></div>
+<div className="how-step-media"><div className="how-speech">You focus on the food. I’ll handle the rest!</div><img alt="Confident Sufri showing that the digital side is taken care of" src="/assets/sufri-approval.webp"/></div>
+<div className="how-step-body"><h3>You Focus on<br/>the Food</h3><p>We keep your digital presence looking good, working properly and ready to bring you more customers.</p></div>
 </article>
 </div>
 </div>
@@ -160,7 +170,7 @@ export default function Home() {
 <div className="plate-orb plate-orb-one"></div><div className="plate-orb plate-orb-two"></div>
 <div aria-live="polite" className="plate-bubble"><span className="plate-bubble-dot"></span><p id="plate-bubble-text">Let’s give your restaurant a website worth visiting.</p></div>
 <div aria-hidden="true" className="plate-feature-icons"><span>⌘</span><span>◎</span><span>⌖</span><span>↗</span></div>
-<img alt="Sufri in his thoughtful pose, seated on his emerald and gold carpet" className="plate-sufri" data-default-src="/assets/sufri-thinking.png" src="/assets/sufri-thinking.png"/>
+<img alt="Sufri in his thoughtful pose, seated on his emerald and gold carpet" className="plate-sufri" data-default-src="/assets/sufri-thinking.webp" src="/assets/sufri-thinking.webp"/>
 <p className="plate-visual-note">One partner. Every digital detail.</p>
 </div>
 </div>
@@ -176,7 +186,7 @@ export default function Home() {
 </div>
 <div className="sufri-cta-art">
 <div className="sufri-cta-bubble">Hey Habibi, what’s holding you back?</div>
-<img alt="Sufri welcoming you with open hands, seated on his emerald and gold carpet" src="/assets/sufri-presenting.png"/>
+<img alt="Sufri welcoming you with open hands, seated on his emerald and gold carpet" src="/assets/sufri-presenting.webp"/>
 </div>
 <div aria-label="What you can expect" className="sufri-cta-promises">
 <div><span aria-hidden="true" className="sufri-cta-promise-icon">✉</span><p><strong>Ask anything</strong><small>No question is too small.</small></p></div>
