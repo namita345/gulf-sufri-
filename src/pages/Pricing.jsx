@@ -254,8 +254,6 @@ function PlanCard({ plan, queryType = 'one-time' }) {
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = React.useState('one-time');
-  const oneTimeRef = React.useRef(null);
-  const monthlyRef = React.useRef(null);
   const [monthlyPackage, setMonthlyPackage] = React.useState('3990');
   const [adSpend, setAdSpend] = React.useState('1500');
   const [profitPerOrder, setProfitPerOrder] = React.useState(35);
@@ -266,8 +264,7 @@ export default function Pricing() {
 
   const jumpTo = (type) => {
     setActiveTab(type);
-    const node = type === 'one-time' ? oneTimeRef.current : monthlyRef.current;
-    node?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('gp-pricing-plans')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -290,7 +287,7 @@ export default function Pricing() {
 
           <div className="gp-hero-visual" aria-label="Sufri presenting pricing options">
             <img className="gp-sufri" src="/assets/pricing-sufri-chef.png" alt="Sufri on his magic carpet" />
-            <img className="gp-recipe-card" src="/assets/pricing-menu-card.png" alt="" aria-hidden="true" />
+            
             <div className="gp-speech-bubble">Good marketing is like a great meal... There's a perfect recipe for everyone!</div>
           </div>
         </div>
@@ -318,30 +315,18 @@ export default function Pricing() {
       </section>
 
       <div className="gp-body">
-        <section className="gp-shell gp-box gp-section" ref={oneTimeRef}>
+        <section className="gp-shell gp-box gp-section gp-plans-section" id="gp-pricing-plans">
           <div className="gp-section-head">
             <div>
-              <span className="gp-kicker">ONE-TIME SERVICES</span>
-              <h2>Build Your <em>Digital Foundation.</em></h2>
+              <span className="gp-kicker">{activeTab === 'one-time' ? 'ONE-TIME SERVICES' : 'MONTHLY SERVICES'}</span>
+              <h2>{activeTab === 'one-time' ? <>Build Your <em>Digital Foundation.</em></> : <>Keep Your Restaurant <em>Growing.</em></>}</h2>
             </div>
-            <p>Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.</p>
+            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Ongoing creative content, advertising, and support to attract more diners and build a loyal community.'}</p>
           </div>
-          <div className="gp-card-grid three-up">
-            {oneTimePlans.map((plan) => <PlanCard key={plan.id} plan={plan} queryType="one-time" />)}
+          <div className="gp-card-grid three-up" key={activeTab}>
+            {(activeTab === 'one-time' ? oneTimePlans : monthlyPlans).map(plan => <PlanCard key={plan.id} plan={plan} queryType={activeTab} />)}
           </div>
-        </section>
-
-        <section className="gp-shell gp-box gp-section" ref={monthlyRef}>
-          <div className="gp-section-head">
-            <div>
-              <span className="gp-kicker">MONTHLY SERVICES</span>
-              <h2>Keep Your Restaurant <em>Growing.</em></h2>
-            </div>
-            <p>Ongoing creative content, advertising, and support to attract more diners and build a loyal community.</p>
-          </div>
-          <div className="gp-card-grid three-up">
-            {monthlyPlans.map((plan) => <PlanCard key={plan.id} plan={plan} queryType="monthly" />)}
-          </div>
+          <p className="gp-pricing-disclaimer">Advertising budgets are separate. Hosting, maintenance and production are optional unless specifically included in your plan. Final deliverables and payment terms are confirmed before purchase.</p>
         </section>
 
         <section className="gp-shell gp-box gp-section gp-addons">
