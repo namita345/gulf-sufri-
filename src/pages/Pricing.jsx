@@ -8,13 +8,14 @@ const oneTimePlans = [
     number: '01',
     eyebrow: 'THE FIRST BITE',
     name: 'The First Bite',
-    subtitle: 'A perfect start for new restaurants or those getting online for the first time.',
-    price: 'QAR 1,990',
+    subtitle: 'A simple, affordable first step: one page and a premium digital menu.',
+    price: 'QAR 750',
     suffix: 'one-time',
     iconType: 'image',
-    icon: '/assets/ornate_emerald_accented_genie_lamp.png',
+    icon: '/assets/about-lamp.webp',
     features: [
-      'Landing page or digital menu',
+      'One-page starter website',
+      'Premium digital menu included',
       'Mobile-friendly design',
       'Basic search visibility setup',
       'Google Business profile setup',
@@ -36,7 +37,7 @@ const oneTimePlans = [
     icon: '/assets/pricing-menu-card.png',
     features: [
       'Up to 5-page restaurant website',
-      'Digital menu setup',
+      'Premium digital menu included',
       'Google Business optimization',
       'Foundational SEO',
       'Contact or reservation inquiry setup',
@@ -56,7 +57,7 @@ const oneTimePlans = [
     icon: '/assets/pricing-palace-icon.png',
     features: [
       'Up to 8-page restaurant website',
-      'Digital menu and booking integration',
+      'Premium digital menu and booking integration',
       'Bilingual-ready design scope',
       'Google Business optimization',
       'Analytics and launch creative kit',
@@ -160,7 +161,7 @@ const compareColumns = [
 ];
 
 const compareRows = [
-  ['Website / Digital Menu', 'Landing page', 'Up to 5 pages', 'Up to 8 pages', '—', '—', '—'],
+  ['Website + Premium Digital Menu', 'One page + menu', 'Up to 5 pages + menu', 'Up to 8 pages + menu', '—', '—', '—'],
   ['Google Business Setup', '●', '●', '●', '—', '—', '—'],
   ['Social Media Management', '—', '—', '—', 'Ad channel only', '8 posts + 4 reels', '12 posts + 6 reels'],
   ['Advertising Management', '—', '—', '—', 'Meta or Google', 'Meta + strategy', 'Meta + Google'],
@@ -326,7 +327,7 @@ export default function Pricing() {
           <div className="gp-card-grid three-up" key={activeTab}>
             {(activeTab === 'one-time' ? oneTimePlans : monthlyPlans).map(plan => <PlanCard key={plan.id} plan={plan} queryType={activeTab} />)}
           </div>
-          <p className="gp-pricing-disclaimer">Monthly plans show introductory management fees for the first three months; renewal pricing and dates must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
+          <p className="gp-pricing-disclaimer">Starter package is limited to one website page plus a premium digital menu; no payment gateway or online payments are included. Monthly plans show introductory management fees for the first three months; renewal pricing and dates must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
         </section>
 
         <section className="gp-shell gp-box gp-section gp-addons">

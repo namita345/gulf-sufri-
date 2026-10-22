@@ -408,3 +408,78 @@
  .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:65px}
  .gp-page .gp-hero-visual{height:245px}
 }
+
+/* 2026 launch: responsive refinement scoped entirely to pricing. */
+.gp-page{width:100%;max-width:100%;overflow-x:clip}
+.gp-page .gp-shell{max-width:1240px}
+.gp-page .gp-section-head > *, .gp-page .gp-card-grid > *, .gp-page .gp-calc-row > *{min-width:0}
+.gp-page .gp-plans-section{scroll-margin-top:92px}
+.gp-page .gp-plan-head{align-items:start;gap:12px}
+.gp-page .gp-plan-head h3{overflow-wrap:normal;word-break:normal;hyphens:none;line-height:1.02}
+.gp-page .gp-feature-list li{overflow-wrap:break-word}
+.gp-page .gp-plan-card .gp-btn{white-space:normal;text-align:center}
+.gp-page .gp-compare-wrap{overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.gp-page .gp-compare-wrap:focus-visible{outline:2px solid #c48a31;outline-offset:3px}
+.gp-page :is(button,select,input,a,summary):focus-visible{outline:3px solid #c48a31;outline-offset:3px}
+.gp-page .gp-calculator-panel{min-width:0}
+.gp-page .gp-calculator-panel select{max-width:100%;font-size:clamp(12px,1vw,15px)}
+.gp-page .gp-step-row article h3,.gp-page .gp-step-row article p{overflow-wrap:normal;word-break:normal}
+@media(min-width:1025px) and (max-width:1320px){
+ .gp-page .gp-card-grid.three-up{gap:14px}
+ .gp-page .gp-plan-card{padding:18px}
+ .gp-page .gp-plan-head{grid-template-columns:minmax(0,1fr) 72px}
+ .gp-page .gp-plan-head h3{font-size:clamp(31px,3vw,42px)}
+ .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:72px}
+ .gp-page .gp-plan-price{font-size:clamp(36px,3.2vw,45px)}
+}
+@media(max-width:1024px){
+ .gp-page .gp-hero-shell{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}
+ .gp-page .gp-hero-copy h1{font-size:clamp(42px,6vw,64px)}
+ .gp-page .gp-calculator{grid-template-columns:1fr}
+ .gp-page .gp-calculator-art{max-height:340px;min-height:260px}
+ .gp-page .gp-calculator-art img{max-height:325px;width:auto;max-width:100%}
+ .gp-page .gp-top-calc{grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr)}
+ .gp-page .gp-top-calc .gp-calc-operator:nth-of-type(2){display:none}
+ .gp-page .gp-top-calc .gp-total-box{grid-column:1/-1}
+ .gp-page .gp-addon-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ .gp-page .gp-hero-shell{display:block;padding:115px 0 75px}
+ .gp-page .gp-hero-copy{max-width:100%}
+ .gp-page .gp-hero-visual{max-width:540px;margin:25px auto 0}
+ .gp-page .gp-section-head,.gp-page .gp-steps-topline{display:block}
+ .gp-page .gp-section-head p,.gp-page .gp-steps-topline p{max-width:100%;margin-top:10px}
+ .gp-page .gp-card-grid.three-up{grid-template-columns:1fr;gap:16px}
+ .gp-page .gp-plan-card{max-width:580px;width:100%;margin-inline:auto;padding:24px}
+ .gp-page .gp-plan-head{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:12px}
+ .gp-page .gp-plan-head h3{font-size:clamp(38px,7vw,49px)}
+ .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:92px}
+ .gp-page .gp-addon-grid{grid-template-columns:1fr}
+ .gp-page .gp-step-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .gp-page .gp-faq-cta{grid-template-columns:1fr}
+ .gp-page .gp-top-calc{grid-template-columns:1fr}
+ .gp-page .gp-top-calc .gp-calc-operator{display:none}
+ .gp-page .gp-top-calc .gp-total-box{grid-column:auto}
+}
+@media(max-width:480px){
+ .gp-page .gp-shell{width:calc(100% - 24px)}
+ .gp-page .gp-hero-shell{padding-top:105px;padding-bottom:70px}
+ .gp-page .gp-hero-copy h1{font-size:clamp(43px,11vw,54px)}
+ .gp-page .gp-hero-points{gap:8px 14px}
+ .gp-page .gp-hero-visual{height:260px}
+ .gp-page .gp-speech-bubble{max-width:175px;padding:11px 13px;font-size:15px;right:0;top:4px}
+ .gp-page .gp-tabs{gap:10px}
+ .gp-page .gp-tabs button{min-width:0;width:100%;max-width:100%}
+ .gp-page .gp-section{padding:20px 15px;margin-top:20px}
+ .gp-page .gp-section-head h2{font-size:clamp(36px,9vw,45px)}
+ .gp-page .gp-plan-card{padding:19px}
+ .gp-page .gp-plan-head{grid-template-columns:minmax(0,1fr) 69px}
+ .gp-page .gp-plan-head h3{font-size:clamp(34px,10vw,46px)}
+ .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:69px}
+ .gp-page .gp-plan-price{font-size:clamp(37px,10.3vw,48px)}
+ .gp-page .gp-step-row{grid-template-columns:1fr;gap:8px}
+ .gp-page .gp-step-row article{padding:14px 0}
+ .gp-page .gp-thought{font-size:13px;max-width:155px}
+ .gp-page .gp-calc-row label>span{font-size:12px}
+ .gp-page .gp-result-box strong{font-size:63px}
+}
