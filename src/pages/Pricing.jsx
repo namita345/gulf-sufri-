@@ -73,7 +73,7 @@ const monthlyPlans = [
     eyebrow: 'THE SPARK',
     name: 'The Spark',
     subtitle: 'Focused advertising to get you noticed.',
-    price: 'QAR 1,990',
+    price: 'QAR 990',
     suffix: '/ month',
     iconType: 'image',
     icon: '/assets/pricing-megaphone-icon.png',
@@ -92,7 +92,7 @@ const monthlyPlans = [
     eyebrow: 'THE CROWD PLEASER',
     name: 'The Crowd Pleaser',
     subtitle: 'Social media + ads to attract more diners.',
-    price: 'QAR 3,990',
+    price: 'QAR 2,490',
     suffix: '/ month',
     badge: 'BEST VALUE',
     featured: true,
@@ -114,7 +114,7 @@ const monthlyPlans = [
     eyebrow: 'THE FULL HOUSE',
     name: 'The Full House',
     subtitle: 'A complete growth partnership for established restaurants.',
-    price: 'QAR 6,990',
+    price: 'QAR 4,490',
     suffix: '/ month',
     iconType: 'bars',
     features: [
@@ -254,8 +254,8 @@ function PlanCard({ plan, queryType = 'one-time' }) {
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = React.useState('one-time');
-  const [monthlyPackage, setMonthlyPackage] = React.useState('3990');
-  const [adSpend, setAdSpend] = React.useState('1500');
+  const [monthlyPackage, setMonthlyPackage] = React.useState('990');
+  const [adSpend, setAdSpend] = React.useState(500);
   const [profitPerOrder, setProfitPerOrder] = React.useState(35);
 
   const totalMonthlyCost = Number(monthlyPackage) + Number(adSpend);
@@ -321,12 +321,12 @@ export default function Pricing() {
               <span className="gp-kicker">{activeTab === 'one-time' ? 'ONE-TIME SERVICES' : 'MONTHLY SERVICES'}</span>
               <h2>{activeTab === 'one-time' ? <>Build Your <em>Digital Foundation.</em></> : <>Keep Your Restaurant <em>Growing.</em></>}</h2>
             </div>
-            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Ongoing creative content, advertising, and support to attract more diners and build a loyal community.'}</p>
+            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Founding Restaurant introductory prices for the first three months. Ongoing creative content, advertising and support, with ad spend separate.'}</p>
           </div>
           <div className="gp-card-grid three-up" key={activeTab}>
             {(activeTab === 'one-time' ? oneTimePlans : monthlyPlans).map(plan => <PlanCard key={plan.id} plan={plan} queryType={activeTab} />)}
           </div>
-          <p className="gp-pricing-disclaimer">Advertising budgets are separate. Hosting, maintenance and production are optional unless specifically included in your plan. Final deliverables and payment terms are confirmed before purchase.</p>
+          <p className="gp-pricing-disclaimer">Monthly plans show introductory management fees for the first three months; renewal pricing and dates must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
         </section>
 
         <section className="gp-shell gp-box gp-section gp-addons">
@@ -394,25 +394,23 @@ export default function Pricing() {
           <div className="gp-calculator-panel">
             <span className="gp-kicker">RESTAURANT GROWTH CALCULATOR</span>
             <h2>How Many Extra <em>Orders?</em></h2>
-            <p>See how many additional orders you need to cover your monthly marketing investment.</p>
+            <p>See how many additional orders you need to cover your monthly marketing investment. Ad spend is paid separately to the advertising platform.</p>
             <div className="gp-calc-row gp-top-calc">
               <label>
                 <span>Monthly Package Fee</span>
                 <select value={monthlyPackage} onChange={(e) => setMonthlyPackage(e.target.value)}>
-                  <option value="1990">QAR 1,990</option>
-                  <option value="3990">QAR 3,990</option>
-                  <option value="6990">QAR 6,990</option>
+                  <option value="990">The Spark — QAR 990</option>
+                  <option value="2490">The Crowd Pleaser — QAR 2,490</option>
+                  <option value="4490">The Full House — QAR 4,490</option>
                 </select>
               </label>
               <div className="gp-calc-operator">+</div>
               <label>
                 <span>Ad Spend (Estimated)</span>
-                <select value={adSpend} onChange={(e) => setAdSpend(e.target.value)}>
-                  <option value="1000">QAR 1,000</option>
-                  <option value="1500">QAR 1,500</option>
-                  <option value="2500">QAR 2,500</option>
-                  <option value="4000">QAR 4,000</option>
-                </select>
+                <div className="gp-calc-slider-control">
+                  <strong>QAR {adSpend.toLocaleString()}</strong>
+                  <input aria-label="Estimated monthly advertising spend in QAR" type="range" min="300" max="3000" step="100" value={adSpend} onChange={(e) => setAdSpend(Number(e.target.value))} />
+                </div>
               </label>
               <div className="gp-calc-operator">=</div>
               <div className="gp-total-box">
@@ -424,7 +422,7 @@ export default function Pricing() {
               <label className="gp-slider-box">
                 <span>Profit per Extra Order</span>
                 <strong>QAR {profitPerOrder}</strong>
-                <input type="range" min="20" max="80" step="5" value={profitPerOrder} onChange={(e) => setProfitPerOrder(Number(e.target.value))} />
+                <input type="range" min="15" max="100" step="5" value={profitPerOrder} onChange={(e) => setProfitPerOrder(Number(e.target.value))} />
               </label>
               <div className="gp-result-box">
                 <span>You Need About</span>
@@ -432,6 +430,7 @@ export default function Pricing() {
                 <p>Extra Orders Per Month <small>({ordersPerDay} extra orders per day)</small></p>
               </div>
             </div>
+            <p className="gp-calculator-disclaimer">This is a break-even illustration, not a prediction or guarantee of results. Profit per order means the amount left after variable costs.</p>
           </div>
         </section>
 

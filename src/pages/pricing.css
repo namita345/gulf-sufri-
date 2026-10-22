@@ -341,3 +341,70 @@
  .gp-sufri{max-height:260px}
  .gp-speech-bubble{max-width:140px;font-size:13px}
 }
+
+/* Pricing launch rates / responsive refinements — strictly scoped to Pricing. */
+.gp-page{overflow-x:clip}
+.gp-page .gp-shell,.gp-page .gp-box,.gp-page .gp-card-grid,.gp-page .gp-plan-card,.gp-page .gp-calculator-panel{min-width:0}
+.gp-page .gp-plan-card .gp-plan-price-row{align-items:baseline;gap:8px}
+.gp-page .gp-plan-price{font-variant-numeric:tabular-nums;overflow-wrap:normal}
+.gp-calc-slider-control{min-height:84px;border:1px solid var(--gp-border);border-radius:18px;background:#fffdf8;padding:10px 14px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.gp-calc-slider-control strong{font-size:22px;color:#315447;font-weight:750}
+.gp-calc-slider-control input{width:100%;margin:0;accent-color:#d09132;cursor:pointer}
+.gp-calculator-disclaimer{font-size:11px!important;line-height:1.55!important;color:#847e70!important;margin-top:14px!important}
+.gp-calc-row select{font-size:13px;line-height:1.35;max-width:100%;padding-left:10px;padding-right:22px;white-space:normal}
+.gp-page .gp-calculator{grid-template-columns:minmax(0,33%) minmax(0,1fr);gap:24px}
+.gp-page .gp-top-calc{grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr);gap:8px}
+.gp-page .gp-calc-operator{font-size:25px}
+.gp-page .gp-total-box strong{font-size:clamp(23px,2.5vw,34px);white-space:normal}
+.gp-page .gp-addon-card>div,.gp-page .gp-plan-head>div{min-width:0}
+@media(max-width:1160px){
+ .gp-page .gp-calculator{grid-template-columns:minmax(0,1fr)}
+ .gp-page .gp-calculator-art{min-height:245px;max-height:315px}
+ .gp-page .gp-calculator-art img{max-height:310px;width:auto;max-width:95%}
+ .gp-page .gp-top-calc{grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr)}
+}
+@media(max-width:920px){
+ .gp-page .gp-card-grid.three-up{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gp-page .gp-addon-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gp-page .gp-hero-shell{grid-template-columns:minmax(0,1fr) minmax(0,.83fr)}
+ .gp-page .gp-plan-head{grid-template-columns:minmax(0,1fr) 74px}
+ .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:74px}
+ .gp-page .gp-plan-head h3{font-size:clamp(34px,4vw,45px)}
+ .gp-page .gp-step-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ .gp-page .gp-faq-cta{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .gp-page .gp-faq-column{grid-column:1/-1}
+}
+@media(max-width:640px){
+ .gp-page .gp-hero-shell{display:block;padding-top:106px;padding-bottom:68px}
+ .gp-page .gp-hero-copy h1{font-size:clamp(43px,10.7vw,66px);line-height:1.02}
+ .gp-page .gp-hero-copy>p{font-size:14px}
+ .gp-page .gp-hero-visual{height:300px;margin-top:18px}
+ .gp-page .gp-speech-bubble{right:0;top:0;max-width:min(150px,43%);font-size:14px}
+ .gp-page .gp-tabs{flex-direction:row;width:100%;gap:7px}
+ .gp-page .gp-tabs button{width:50%;min-width:0;padding:11px 9px;gap:7px}
+ .gp-page .gp-tabs button strong{font-size:clamp(17px,4.6vw,23px)}
+ .gp-page .gp-tabs button small{font-size:10px;line-height:1.3}
+ .gp-page .gp-tabs .gp-tab-icon{flex:none}
+ .gp-page .gp-section{padding:22px 15px;margin-top:24px}
+ .gp-page .gp-card-grid.three-up,.gp-page .gp-addon-grid,.gp-page .gp-faq-cta,.gp-page .gp-step-row{grid-template-columns:1fr}
+ .gp-page .gp-plan-head{grid-template-columns:minmax(0,1fr) 80px}
+ .gp-page .gp-plan-head h3{font-size:clamp(38px,10vw,48px)}
+ .gp-page .gp-plan-price{font-size:clamp(39px,10vw,52px)}
+ .gp-page .gp-section-head{display:block}
+ .gp-page .gp-section-head p{padding-top:10px}
+ .gp-page .gp-calculator{grid-template-columns:1fr;gap:14px}
+ .gp-page .gp-top-calc,.gp-page .gp-bottom-calc{grid-template-columns:1fr}
+ .gp-page .gp-top-calc .gp-calc-operator{display:none}
+ .gp-page .gp-top-calc .gp-total-box{grid-column:auto}
+ .gp-page .gp-steps-topline{display:block}
+ .gp-page .gp-step-row article{width:100%;padding:15px 0}
+ .gp-page .gp-step-row article:nth-of-type(3),.gp-page .gp-step-row article:nth-of-type(4){grid-column:auto}
+ .gp-page .gp-faq-column{grid-column:auto}
+ .gp-page .gp-side-cta{min-height:270px}
+}
+@media(max-width:370px){
+ .gp-page .gp-tabs .gp-tab-icon{display:none}
+ .gp-page .gp-plan-head{grid-template-columns:minmax(0,1fr) 65px}
+ .gp-page .gp-plan-art,.gp-page .gp-plan-art img{width:65px}
+ .gp-page .gp-hero-visual{height:245px}
+}
