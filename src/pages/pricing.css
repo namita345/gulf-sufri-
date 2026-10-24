@@ -483,3 +483,18 @@
  .gp-page .gp-calc-row label>span{font-size:12px}
  .gp-page .gp-result-box strong{font-size:63px}
 }
+
+/* Grand opening announcement and further small-screen safeguards — pricing only */
+.gp-page .gp-launch-pill{display:inline-flex;align-items:center;padding:9px 15px;border-radius:999px;background:#fff3d4;border:1px solid #e5c38a;color:#9b611e;font-weight:800;font-size:12px;line-height:1.4;margin-bottom:15px;box-shadow:0 5px 18px #5b370b13}
+.gp-page .gp-offer-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 19px;margin:0 0 22px;background:linear-gradient(95deg,#fff0cf,#fff9ed);border:1px solid #e7c995;border-radius:16px;color:#6b4c23;font-size:13px;line-height:1.5}
+.gp-page .gp-offer-banner strong{font-weight:850;color:#96611c;white-space:nowrap}
+.gp-page .gp-offer-banner span{flex:1;min-width:195px}
+.gp-page .gp-plan-card{min-width:0}
+.gp-page .gp-plan-head > div:first-child{min-width:0}
+.gp-page .gp-plan-subtitle,.gp-page .gp-plan-price-row{overflow-wrap:break-word}
+.gp-page .gp-plan-price-row{flex-wrap:wrap}
+.gp-page .gp-plan-price{white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.gp-page .gp-addon-card > div:last-child{min-width:0}
+.gp-page .gp-addon-card h3{overflow-wrap:break-word}
+@media(max-width:780px){.gp-page .gp-tabs{width:100%;justify-content:center}.gp-page .gp-tabs button{min-width:0}.gp-page .gp-hero-points{align-items:center}.gp-page .gp-section-head p{padding-top:10px}.gp-page .gp-plan-card{max-width:590px}}
+@media(max-width:480px){.gp-page .gp-tabs{flex-direction:column;gap:8px}.gp-page .gp-tabs button{width:100%;max-width:100%}.gp-page .gp-offer-banner{padding:12px 14px;gap:7px}.gp-page .gp-launch-pill{font-size:11px;padding:7px 11px}.gp-page .gp-plan-price{font-size:clamp(35px,10vw,46px)}.gp-page .gp-addon-card{grid-template-columns:58px minmax(0,1fr);gap:10px}.gp-page .gp-addon-card h3{font-size:clamp(22px,7vw,27px)}}

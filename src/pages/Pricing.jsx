@@ -29,7 +29,7 @@ const oneTimePlans = [
     eyebrow: 'THE MAIN COURSE',
     name: 'The Main Course',
     subtitle: 'A complete digital home for growing restaurants.',
-    price: 'QAR 4,490',
+    price: 'QAR 1,750',
     suffix: 'one-time',
     badge: 'MOST POPULAR',
     featured: true,
@@ -51,7 +51,7 @@ const oneTimePlans = [
     eyebrow: 'THE FULL SUFRA',
     name: 'The Full Sufra',
     subtitle: 'A richer launch experience for ambitious restaurants.',
-    price: 'QAR 7,990',
+    price: 'QAR 2,999',
     suffix: 'one-time',
     iconType: 'image',
     icon: '/assets/pricing-palace-icon.png',
@@ -74,7 +74,7 @@ const monthlyPlans = [
     eyebrow: 'THE SPARK',
     name: 'The Spark',
     subtitle: 'Focused advertising to get you noticed.',
-    price: 'QAR 990',
+    price: 'QAR 890',
     suffix: '/ month',
     iconType: 'image',
     icon: '/assets/pricing-megaphone-icon.png',
@@ -93,7 +93,7 @@ const monthlyPlans = [
     eyebrow: 'THE CROWD PLEASER',
     name: 'The Crowd Pleaser',
     subtitle: 'Social media + ads to attract more diners.',
-    price: 'QAR 2,490',
+    price: 'QAR 1,990',
     suffix: '/ month',
     badge: 'BEST VALUE',
     featured: true,
@@ -115,7 +115,7 @@ const monthlyPlans = [
     eyebrow: 'THE FULL HOUSE',
     name: 'The Full House',
     subtitle: 'A complete growth partnership for established restaurants.',
-    price: 'QAR 4,490',
+    price: 'QAR 3,490',
     suffix: '/ month',
     iconType: 'bars',
     features: [
@@ -133,19 +133,19 @@ const monthlyPlans = [
 const addons = [
   {
     title: 'Website Hosting',
-    price: 'QAR 149 / month',
+    price: 'QAR 99 / month',
     detail: 'Reliable, secure hosting for your website.',
     icon: 'server'
   },
   {
     title: 'Website Maintenance',
-    price: 'QAR 490 / month',
+    price: 'QAR 349 / month',
     detail: 'Updates, backups, security and small edits.',
     icon: 'gear'
   },
   {
     title: 'On-Site Photos & Videos',
-    price: 'QAR 990',
+    price: 'QAR 750',
     detail: 'Professional content at your restaurant.',
     icon: 'camera'
   }
@@ -173,6 +173,7 @@ const faqItems = [
   ['Do I have to use your hosting?', 'Not at all. If you already have hosting, we can work with that. Hosting is offered only if you want us to handle it.'],
   ['What does website maintenance include?', 'Maintenance covers backups, updates, security checks, and minor text or image edits within the agreed monthly scope.'],
   ['Can I upgrade or change my plan later?', 'Yes. You can start small and grow into a bigger package as your restaurant expands.'],
+  ['How long does the grand opening discount last?', 'These are introductory launch prices. Your confirmed proposal will specify the offer eligibility, validity and exact deliverables before you pay.'],
   ['What happens after I make a payment?', 'After payment, we ask a few focused questions, collect the materials we need, and begin shaping everything around your restaurant.']
 ];
 
@@ -255,7 +256,7 @@ function PlanCard({ plan, queryType = 'one-time' }) {
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = React.useState('one-time');
-  const [monthlyPackage, setMonthlyPackage] = React.useState('990');
+  const [monthlyPackage, setMonthlyPackage] = React.useState('890');
   const [adSpend, setAdSpend] = React.useState(500);
   const [profitPerOrder, setProfitPerOrder] = React.useState(35);
 
@@ -273,11 +274,12 @@ export default function Pricing() {
       <section className="gp-hero">
         <div className="gp-shell gp-hero-shell">
           <div className="gp-hero-copy">
-            <span className="gp-kicker">PRICING MADE SIMPLE</span>
+            <span className="gp-kicker">GRAND OPENING • INTRODUCTORY OFFERS</span>
+            <div className="gp-launch-pill">✦ Special launch pricing on our restaurant packages</div>
             <h1>Choose Your <em>Recipe for Success.</em></h1>
             <p>
               Whether you're just getting started or ready to grow, we have the perfect mix of digital
-              services to help your restaurant shine. Transparent pricing. Real value. Delicious results.
+              services to help your restaurant shine. Launch-friendly prices. Real value. Delicious results.
             </p>
             <div className="gp-hero-points">
               <span><BulletIcon type="restaurant" />Built for Restaurants</span>
@@ -319,15 +321,16 @@ export default function Pricing() {
         <section className="gp-shell gp-box gp-section gp-plans-section" id="gp-pricing-plans">
           <div className="gp-section-head">
             <div>
-              <span className="gp-kicker">{activeTab === 'one-time' ? 'ONE-TIME SERVICES' : 'MONTHLY SERVICES'}</span>
+              <span className="gp-kicker">{activeTab === 'one-time' ? 'ONE-TIME SERVICES • GRAND OPENING PRICES' : 'MONTHLY SERVICES • FOUNDING RESTAURANT RATES'}</span>
               <h2>{activeTab === 'one-time' ? <>Build Your <em>Digital Foundation.</em></> : <>Keep Your Restaurant <em>Growing.</em></>}</h2>
             </div>
-            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Founding Restaurant introductory prices for the first three months. Ongoing creative content, advertising and support, with ad spend separate.'}</p>
+            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Affordable founding-restaurant rates on monthly marketing. Ad spend stays separate, so you control your budget.'}</p>
           </div>
+          <div className="gp-offer-banner"><strong>✦ Grand Opening Special</strong><span>{activeTab === 'one-time' ? 'Introductory prices start at QAR 750 — premium digital menu included with every website package.' : 'Special monthly launch rates to help independent restaurants get started. Advertising budget is always separate.'}</span></div>
           <div className="gp-card-grid three-up" key={activeTab}>
             {(activeTab === 'one-time' ? oneTimePlans : monthlyPlans).map(plan => <PlanCard key={plan.id} plan={plan} queryType={activeTab} />)}
           </div>
-          <p className="gp-pricing-disclaimer">Starter package is limited to one website page plus a premium digital menu; no payment gateway or online payments are included. Monthly plans show introductory management fees for the first three months; renewal pricing and dates must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
+          <p className="gp-pricing-disclaimer">Starter package is limited to one website page plus a premium digital menu; no payment gateway or online payments are included. Monthly prices are introductory offers; any future rate changes or renewal terms must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
         </section>
 
         <section className="gp-shell gp-box gp-section gp-addons">
@@ -400,9 +403,9 @@ export default function Pricing() {
               <label>
                 <span>Monthly Package Fee</span>
                 <select value={monthlyPackage} onChange={(e) => setMonthlyPackage(e.target.value)}>
-                  <option value="990">The Spark — QAR 990</option>
-                  <option value="2490">The Crowd Pleaser — QAR 2,490</option>
-                  <option value="4490">The Full House — QAR 4,490</option>
+                  <option value="890">The Spark — QAR 890</option>
+                  <option value="1990">The Crowd Pleaser — QAR 1,990</option>
+                  <option value="3490">The Full House — QAR 3,490</option>
                 </select>
               </label>
               <div className="gp-calc-operator">+</div>
