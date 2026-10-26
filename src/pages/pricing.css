@@ -498,3 +498,25 @@
 .gp-page .gp-addon-card h3{overflow-wrap:break-word}
 @media(max-width:780px){.gp-page .gp-tabs{width:100%;justify-content:center}.gp-page .gp-tabs button{min-width:0}.gp-page .gp-hero-points{align-items:center}.gp-page .gp-section-head p{padding-top:10px}.gp-page .gp-plan-card{max-width:590px}}
 @media(max-width:480px){.gp-page .gp-tabs{flex-direction:column;gap:8px}.gp-page .gp-tabs button{width:100%;max-width:100%}.gp-page .gp-offer-banner{padding:12px 14px;gap:7px}.gp-page .gp-launch-pill{font-size:11px;padding:7px 11px}.gp-page .gp-plan-price{font-size:clamp(35px,10vw,46px)}.gp-page .gp-addon-card{grid-template-columns:58px minmax(0,1fr);gap:10px}.gp-page .gp-addon-card h3{font-size:clamp(22px,7vw,27px)}}
+.gp-first-look {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 32px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(232, 175, 97, .42);
+  border-radius: 22px;
+  background: #164b40;
+  color: #fff;
+}
+.gp-first-look h2 { color: #fff; font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 8px 0; }
+.gp-first-look h2 em { color: #e8af61; }
+.gp-first-look p { max-width: 740px; margin: 0 0 8px; line-height: 1.6; }
+.gp-first-look small { color: #c6e2d7; }
+.gp-first-look .gp-btn { flex-shrink: 0; }
+@media (max-width: 760px) {
+  .gp-first-look { flex-direction: column; align-items: flex-start; padding: 23px 20px; }
+  .gp-first-look .gp-btn { width: 100%; justify-content: center; }
+}

@@ -8,18 +8,18 @@ const oneTimePlans = [
     number: '01',
     eyebrow: 'THE FIRST BITE',
     name: 'The First Bite',
-    subtitle: 'A simple, affordable first step: one page and a premium digital menu.',
-    price: 'QAR 750',
+    subtitle: 'Your restaurant, ready to make a lovely first impression.',
+    price: 'QAR 690',
     suffix: 'one-time',
     iconType: 'image',
     icon: '/assets/about-lamp.webp',
     features: [
-      'One-page starter website',
+      'Basic restaurant website (up to 6 pages)',
       'Premium digital menu included',
       'Mobile-friendly design',
-      'Basic search visibility setup',
-      'Google Business profile setup',
-      'Launch handover and guidance'
+      'Free foundational SEO',
+      'Facebook & Instagram account setup',
+      '2 branded launch posts + handover'
     ],
     cta: 'Get Started'
   },
@@ -29,19 +29,20 @@ const oneTimePlans = [
     eyebrow: 'THE MAIN COURSE',
     name: 'The Main Course',
     subtitle: 'A complete digital home for growing restaurants.',
-    price: 'QAR 1,750',
+    price: 'QAR 1,490',
     suffix: 'one-time',
     badge: 'MOST POPULAR',
     featured: true,
     iconType: 'image',
     icon: '/assets/pricing-menu-card.png',
     features: [
-      'Up to 5-page restaurant website',
+      'Custom restaurant website (up to 6 pages)',
       'Premium digital menu included',
-      'Google Business optimization',
-      'Foundational SEO',
+      'Free foundational SEO',
       'Contact or reservation inquiry setup',
-      'Launch training and support'
+      'Social media profile setup + 5 launch posts',
+      'One Meta campaign setup (ad spend separate)',
+      '2 months complimentary managed hosting'
     ],
     cta: 'Choose This Plan'
   },
@@ -51,17 +52,18 @@ const oneTimePlans = [
     eyebrow: 'THE FULL SUFRA',
     name: 'The Full Sufra',
     subtitle: 'A richer launch experience for ambitious restaurants.',
-    price: 'QAR 2,999',
+    price: 'QAR 2,490',
     suffix: 'one-time',
     iconType: 'image',
     icon: '/assets/pricing-palace-icon.png',
     features: [
-      'Up to 8-page restaurant website',
-      'Premium digital menu and booking integration',
-      'Bilingual-ready design scope',
-      'Google Business optimization',
-      'Analytics and launch creative kit',
-      'Priority launch support'
+      'Advanced custom website (up to 8 pages)',
+      'Premium QR digital menu + booking inquiry',
+      'Free foundational SEO + analytics setup',
+      'Facebook & Instagram setup + 8 launch posts',
+      'One Meta launch campaign + 2 creatives',
+      '2 months complimentary enhanced hosting',
+      'Priority launch handover (ad spend separate)'
     ],
     cta: 'Explore This Plan'
   }
@@ -69,62 +71,65 @@ const oneTimePlans = [
 
 const monthlyPlans = [
   {
-    id: 'spark',
+    id: 'first-bite',
     number: '01',
-    eyebrow: 'THE SPARK',
-    name: 'The Spark',
-    subtitle: 'Focused advertising to get you noticed.',
-    price: 'QAR 890',
+    eyebrow: 'THE FIRST BITE',
+    name: 'The First Bite',
+    subtitle: 'Let us keep your restaurant looking fresh online.',
+    price: 'QAR 490',
     suffix: '/ month',
     iconType: 'image',
-    icon: '/assets/pricing-megaphone-icon.png',
+    icon: '/assets/about-lamp.webp',
     features: [
-      'One advertising channel (Meta or Google)',
-      'Campaign setup and optimization',
-      'Up to 3 ad creatives',
-      'Monthly performance report',
-      'Email support'
+      'Starter website + premium QR digital menu',
+      'Free foundational SEO setup',
+      '4 designed social posts per month',
+      'Facebook & Instagram support',
+      'Menu updates + basic website care'
     ],
     cta: 'Get Started'
   },
   {
-    id: 'crowd-pleaser',
+    id: 'main-course',
     number: '02',
-    eyebrow: 'THE CROWD PLEASER',
-    name: 'The Crowd Pleaser',
-    subtitle: 'Social media + ads to attract more diners.',
-    price: 'QAR 1,990',
+    eyebrow: 'THE MAIN COURSE',
+    name: 'The Main Course',
+    subtitle: 'A custom website and a steady social presence.',
+    price: 'QAR 890',
     suffix: '/ month',
     badge: 'BEST VALUE',
     featured: true,
     iconType: 'image',
-    icon: '/assets/pricing-bowl-icon.png',
+    icon: '/assets/pricing-menu-card.png',
     features: [
+      'Custom website + premium QR digital menu',
+      'Free foundational SEO setup',
+      '8 designed posts + 2 edited Reels monthly',
       'Instagram & Facebook management',
-      '8 designed posts + 4 edited reels',
-      'Meta advertising management',
-      'Monthly content strategy',
-      'Campaign optimization and reporting',
-      'Priority support'
+      'Menu updates + website care',
+      'Monthly performance summary'
     ],
     cta: 'Choose This Plan'
   },
   {
-    id: 'full-house',
+    id: 'full-sufra',
     number: '03',
-    eyebrow: 'THE FULL HOUSE',
-    name: 'The Full House',
-    subtitle: 'A complete growth partnership for established restaurants.',
-    price: 'QAR 3,490',
+    eyebrow: 'THE FULL SUFRA',
+    name: 'The Full Sufra',
+    subtitle: 'Your digital presence, content and ads — taken care of.',
+    price: 'QAR 1,490',
     suffix: '/ month',
-    iconType: 'bars',
+    iconType: 'image',
+    icon: '/assets/pricing-palace-icon.png',
+    badge: 'ADS MANAGEMENT INCLUDED',
     features: [
-      '12 designed posts + 6 edited reels',
-      'Meta + Google Ads management',
-      'Google Business ongoing support',
-      'Campaign tracking and optimization',
-      'Monthly strategy review',
-      'Dedicated account support'
+      'Advanced website + premium QR digital menu',
+      'Free foundational SEO + website care',
+      '12 designed posts + 4 edited Reels monthly',
+      'Instagram & Facebook management',
+      'One Meta campaign managed at no extra fee',
+      'Google Business support + monthly report',
+      'Ad spend paid separately to Meta'
     ],
     cta: 'Explore This Plan'
   }
@@ -132,15 +137,15 @@ const monthlyPlans = [
 
 const addons = [
   {
-    title: 'Website Hosting',
-    price: 'QAR 99 / month',
-    detail: 'Reliable, secure hosting for your website.',
+    title: 'Managed Hosting & Care',
+    price: 'QAR 79 / month',
+    detail: 'Optional for First Bite; Main Course includes the first 2 months complimentary.',
     icon: 'server'
   },
   {
-    title: 'Website Maintenance',
-    price: 'QAR 349 / month',
-    detail: 'Updates, backups, security and small edits.',
+    title: 'Enhanced Hosting & Care',
+    price: 'QAR 129 / month',
+    detail: 'Full Sufra includes its first 2 months complimentary.',
     icon: 'gear'
   },
   {
@@ -154,26 +159,34 @@ const addons = [
 const compareColumns = [
   'The First Bite',
   'The Main Course',
-  'The Full Sufra',
-  'The Spark',
-  'The Crowd Pleaser',
-  'The Full House'
+  'The Full Sufra'
 ];
 
-const compareRows = [
-  ['Website + Premium Digital Menu', 'One page + menu', 'Up to 5 pages + menu', 'Up to 8 pages + menu', '—', '—', '—'],
-  ['Google Business Setup', '●', '●', '●', '—', '—', '—'],
-  ['Social Media Management', '—', '—', '—', 'Ad channel only', '8 posts + 4 reels', '12 posts + 6 reels'],
-  ['Advertising Management', '—', '—', '—', 'Meta or Google', 'Meta + strategy', 'Meta + Google'],
-  ['Monthly Support', '—', '—', '—', '●', '●', '●']
-];
+const compareRows = {
+  'one-time': [
+    ['Website', 'Basic · up to 6 pages', 'Custom · up to 6 pages', 'Advanced · up to 8 pages'],
+    ['Premium QR Menu', '●', '●', '●'],
+    ['Social Media', 'Setup + 2 posts', 'Setup + 5 posts', 'Setup + 8 posts'],
+    ['Meta Ads', '—', 'Campaign setup', 'Launch campaign + 2 creatives'],
+    ['Hosting Promotion', 'Optional', '2 months free', '2 months free']
+  ],
+  monthly: [
+    ['Website + Premium QR Menu', '●', '●', '●'],
+    ['Monthly Social Content', '4 posts', '8 posts + 2 Reels', '12 posts + 4 Reels'],
+    ['Menu Updates + Website Care', '●', '●', '●'],
+    ['Meta Ads Management', '—', '—', 'One campaign included'],
+    ['Monthly Reporting', '—', 'Summary', 'Full report']
+  ]
+};
 
 const faqItems = [
-  ['Is the advertising budget included?', 'No — ad spend is separate. The monthly plan covers strategy, setup, management, creative coordination, and optimization.'],
+  ['Is the advertising budget included?', 'No. Meta ad spend is paid separately. Full Sufra Monthly includes management of one Meta campaign without an additional management fee.'],
   ['Do I have to use your hosting?', 'Not at all. If you already have hosting, we can work with that. Hosting is offered only if you want us to handle it.'],
   ['What does website maintenance include?', 'Maintenance covers backups, updates, security checks, and minor text or image edits within the agreed monthly scope.'],
   ['Can I upgrade or change my plan later?', 'Yes. You can start small and grow into a bigger package as your restaurant expands.'],
-  ['How long does the grand opening discount last?', 'These are introductory launch prices. Your confirmed proposal will specify the offer eligibility, validity and exact deliverables before you pay.'],
+  ['What is the difference between one-time and monthly?', 'One-time means a defined setup and launch handover. Monthly means ongoing content, menu updates and website support. Monthly website delivery, cancellation and ownership terms are explained in your proposal. Monthly is not an installment plan.'],
+  ['How does the QAR 99 First Look work?', 'We deliver a personalized website and digital menu concept preview within 7 days. It is not a finished site. Upgrade within 14 days after preview delivery and QAR 99 is credited toward your selected package.'],
+  ['How long does the grand opening discount last?', 'These are proposed introductory launch prices. Your confirmed proposal specifies the final price, offer eligibility, duration and deliverables before payment.'],
   ['What happens after I make a payment?', 'After payment, we ask a few focused questions, collect the materials we need, and begin shaping everything around your restaurant.']
 ];
 
@@ -256,7 +269,7 @@ function PlanCard({ plan, queryType = 'one-time' }) {
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = React.useState('one-time');
-  const [monthlyPackage, setMonthlyPackage] = React.useState('890');
+  const [monthlyPackage, setMonthlyPackage] = React.useState('490');
   const [adSpend, setAdSpend] = React.useState(500);
   const [profitPerOrder, setProfitPerOrder] = React.useState(35);
 
@@ -303,14 +316,14 @@ export default function Pricing() {
               <span className="gp-tab-icon">✦</span>
               <span>
                 <strong>One-Time Magic</strong>
-                <small>Build your digital foundation</small>
+                <small>Do it for me once</small>
               </span>
             </button>
             <button className={activeTab === 'monthly' ? 'is-active' : ''} onClick={() => jumpTo('monthly')} role="tab" aria-selected={activeTab === 'monthly'}>
               <span className="gp-tab-icon">✦</span>
               <span>
                 <strong>Monthly Momentum</strong>
-                <small>Ongoing growth and results</small>
+                <small>Take care of me every month</small>
               </span>
             </button>
           </div>
@@ -318,19 +331,28 @@ export default function Pricing() {
       </section>
 
       <div className="gp-body">
+        <section className="gp-shell gp-first-look" aria-label="Seven-day First Look offer">
+          <div>
+            <span className="gp-kicker">NOT SURE YET? HAVE A LITTLE TASTE.</span>
+            <h2>Your First Look at the Magic — <em>QAR 99.</em></h2>
+            <p>Get a personalized website and premium QR menu concept preview within 7 days. Upgrade within 14 days of delivery and we'll credit your QAR 99 toward your package.</p>
+            <small>A concept preview, not a completed website.</small>
+          </div>
+          <Link className="gp-btn gp-btn-gold" to="/contact?pricing=first-look&plan=7-day-preview">Show Me the Magic <i>→</i></Link>
+        </section>
         <section className="gp-shell gp-box gp-section gp-plans-section" id="gp-pricing-plans">
           <div className="gp-section-head">
             <div>
               <span className="gp-kicker">{activeTab === 'one-time' ? 'ONE-TIME SERVICES • GRAND OPENING PRICES' : 'MONTHLY SERVICES • FOUNDING RESTAURANT RATES'}</span>
-              <h2>{activeTab === 'one-time' ? <>Build Your <em>Digital Foundation.</em></> : <>Keep Your Restaurant <em>Growing.</em></>}</h2>
+              <h2>{activeTab === 'one-time' ? <>Set It Up. <em>Make It Yours.</em></> : <>We'll Keep the <em>Magic Going.</em></>}</h2>
             </div>
-            <p>{activeTab === 'one-time' ? 'Get everything your restaurant needs to look amazing online. A one-time investment for a long-term impact.' : 'Affordable founding-restaurant rates on monthly marketing. Ad spend stays separate, so you control your budget.'}</p>
+            <p>{activeTab === 'one-time' ? 'Website, premium QR menu, social profiles and launch content — one clear price, one happy handover.' : 'The same three restaurant packages, with ongoing content, website care and menu updates. No installment plan.'}</p>
           </div>
-          <div className="gp-offer-banner"><strong>✦ Grand Opening Special</strong><span>{activeTab === 'one-time' ? 'Introductory prices start at QAR 750 — premium digital menu included with every website package.' : 'Special monthly launch rates to help independent restaurants get started. Advertising budget is always separate.'}</span></div>
+          <div className="gp-offer-banner"><strong>✦ Grand Opening Special</strong><span>{activeTab === 'one-time' ? 'Proposed launch prices start at QAR 690 — premium digital menu included in every plan.' : 'Proposed founding-restaurant rates start at QAR 490/month. Premium Meta Ads management included in Full Sufra; ad spend separate.'}</span></div>
           <div className="gp-card-grid three-up" key={activeTab}>
             {(activeTab === 'one-time' ? oneTimePlans : monthlyPlans).map(plan => <PlanCard key={plan.id} plan={plan} queryType={activeTab} />)}
           </div>
-          <p className="gp-pricing-disclaimer">Starter package is limited to one website page plus a premium digital menu; no payment gateway or online payments are included. Monthly prices are introductory offers; any future rate changes or renewal terms must be agreed before purchase. Ad budgets are paid separately. Hosting, maintenance and on-site production are optional. Scope and payment terms are confirmed before purchase.</p>
+          <p className="gp-pricing-disclaimer">Proposed introductory prices, subject to confirmation before purchase. First Bite website has up to 6 basic pages, without a payment gateway or online checkout. Premium QR menus are included in every plan. One-time packages cover setup and limited launch work; monthly packages cover ongoing services, not installment payments. Main Course hosting: first 2 months free, then optional QAR 79/month. Full Sufra hosting: first 2 months free, then optional QAR 129/month. First Bite managed hosting: optional QAR 79/month from activation. Clients may use their own hosting. Ad spend, on-site production and additional revisions are separate. Monthly website delivery and ownership terms will be confirmed in writing before purchase.</p>
         </section>
 
         <section className="gp-shell gp-box gp-section gp-addons">
@@ -371,13 +393,12 @@ export default function Pricing() {
                     <th key={col} className={index === 1 ? 'is-highlight' : ''}>
                       <span>{col}</span>
                       {index === 1 && <small>Most Popular</small>}
-                      {index === 4 && <small>Best Value</small>}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {compareRows.map((row) => (
+                {compareRows[activeTab].map((row) => (
                   <tr key={row[0]}>
                     <th>{row[0]}</th>
                     {row.slice(1).map((cell, idx) => (
@@ -403,9 +424,9 @@ export default function Pricing() {
               <label>
                 <span>Monthly Package Fee</span>
                 <select value={monthlyPackage} onChange={(e) => setMonthlyPackage(e.target.value)}>
-                  <option value="890">The Spark — QAR 890</option>
-                  <option value="1990">The Crowd Pleaser — QAR 1,990</option>
-                  <option value="3490">The Full House — QAR 3,490</option>
+                  <option value="490">The First Bite — QAR 490</option>
+                  <option value="890">The Main Course — QAR 890</option>
+                  <option value="1490">The Full Sufra — QAR 1,490</option>
                 </select>
               </label>
               <div className="gp-calc-operator">+</div>
