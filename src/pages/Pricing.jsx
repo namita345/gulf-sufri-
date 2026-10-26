@@ -279,7 +279,6 @@ export default function Pricing() {
 
   const jumpTo = (type) => {
     setActiveTab(type);
-    document.getElementById('gp-pricing-plans')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -309,8 +308,18 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="gp-tabs-wrap">
-        <div className="gp-shell">
+      <div className="gp-body">
+        <section className="gp-shell gp-first-look" aria-label="Seven-day First Look offer">
+          <div>
+            <span className="gp-kicker">NOT SURE YET? HAVE A LITTLE TASTE.</span>
+            <h2>Your First Look at the Magic — <em>QAR 99.</em></h2>
+            <p>Get a personalized website and premium QR menu concept preview within 7 days. Upgrade within 14 days of delivery and we'll credit your QAR 99 toward your package.</p>
+            <small>A concept preview, not a completed website.</small>
+          </div>
+          <Link className="gp-btn gp-btn-gold" to="/contact?pricing=first-look&plan=7-day-preview">Show Me the Magic <i>→</i></Link>
+        </section>
+        <section className="gp-tabs-wrap" aria-label="Choose how we help your restaurant">
+          <div className="gp-shell">
           <div className="gp-tabs" role="tablist" aria-label="Pricing categories">
             <button className={activeTab === 'one-time' ? 'is-active' : ''} onClick={() => jumpTo('one-time')} role="tab" aria-selected={activeTab === 'one-time'}>
               <span className="gp-tab-icon">✦</span>
@@ -327,18 +336,7 @@ export default function Pricing() {
               </span>
             </button>
           </div>
-        </div>
-      </section>
-
-      <div className="gp-body">
-        <section className="gp-shell gp-first-look" aria-label="Seven-day First Look offer">
-          <div>
-            <span className="gp-kicker">NOT SURE YET? HAVE A LITTLE TASTE.</span>
-            <h2>Your First Look at the Magic — <em>QAR 99.</em></h2>
-            <p>Get a personalized website and premium QR menu concept preview within 7 days. Upgrade within 14 days of delivery and we'll credit your QAR 99 toward your package.</p>
-            <small>A concept preview, not a completed website.</small>
           </div>
-          <Link className="gp-btn gp-btn-gold" to="/contact?pricing=first-look&plan=7-day-preview">Show Me the Magic <i>→</i></Link>
         </section>
         <section className="gp-shell gp-box gp-section gp-plans-section" id="gp-pricing-plans">
           <div className="gp-section-head">
