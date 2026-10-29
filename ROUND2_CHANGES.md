@@ -1,0 +1,1 @@
+Round 2 updates: distinct Jinni template accents and palette chips; constrained 4:3 previews; compressed mobile Jinni process stage; digital menus reveal fallback on mobile and observer preloading; preserved existing Whop URLs. Full browser testing and live payment verification still required.\n

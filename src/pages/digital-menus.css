@@ -463,3 +463,17 @@
   .gdm-page .gdm-hero-book{width:59%;right:-3%;}
   .gdm-page .gdm-hero-bubble{width:144px;top:-37px;right:0;}
 }
+
+/* Present complete menu concepts without cropping labels or edges. */
+.gdm-page .gdm-template-image>img{object-fit:contain;background:#fffaf2}
+@media(max-width:560px){.gdm-page .gdm-template-image>img{object-fit:contain!important}.gdm-page .gdm-template-rail{scroll-padding-inline:14px}}
+
+/* Round 2: mobile content stays visible even when intersection observers fail. */
+@media(max-width:820px){
+ .gdm-page .gdm-reveal{opacity:1;translate:0 0;transition:none}
+ .gdm-page .gdm-sections{padding-bottom:28px}
+ .gdm-page .gdm-panel{margin-bottom:24px}
+ .gdm-page .gdm-feature-grid{min-width:0}
+ .gdm-page .gdm-feature{min-width:0}
+ .gdm-page .gdm-showroom img{max-width:100%;object-fit:contain}
+}

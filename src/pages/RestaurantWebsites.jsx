@@ -5,10 +5,10 @@ import './restaurant-websites.css';
 
 const A = '/assets/';
 const TEMPLATES = [
-  { id:'spice-house', name:'The Spice House', style:'Dark · Elegant · Bold', image:'template-spice-house.webp', description:'A dramatic, luxury look for destination dining and signature cuisine.', jinni:'jinni-template-spice.webp', quip:'Dark, dramatic, expensive-looking. Finally, a website with standards.' },
-  { id:'olive-thyme', name:'Olive & Thyme', style:'Clean · Modern · Fresh', image:'template-olive-thyme.webp', description:'Sunlit, minimal design for modern cafés and Mediterranean concepts.', jinni:'jinni-template-olive.webp', quip:'Elegant. Minimal. See? You don’t need 47 colors to look expensive.' },
-  { id:'al-yamama', name:'Al Yamama', style:'Traditional · Luxury · Warm', image:'template-al-yamama.webp', description:'Timeless Arabian hospitality, with rich green and golden details.', jinni:'jinni-template-yamama.webp', quip:'Traditional doesn’t mean outdated, darling. This isn’t 2009.' },
-  { id:'ocean-grill', name:'Ocean Grill', style:'Modern · Clean · Coastal', image:'template-ocean-grill.webp', description:'Fresh ocean blue with refined seafood and coastal imagery.', jinni:'jinni-template-ocean.webp', quip:'Coastal luxury without the tacky clip-art fish. You’re welcome.' },
+  { id:'spice-house', name:'The Spice House', style:'Maroon · Copper · Cream', image:'template-spice-house-rose.webp', description:'A dramatic, luxury look for destination dining and signature cuisine.', jinni:'jinni-template-spice.webp', quip:'Dark, dramatic, expensive-looking. Finally, a website with standards.' },
+  { id:'olive-thyme', name:'Olive & Thyme', style:'Sage · Ivory · Terracotta', image:'template-olive-thyme.webp', description:'Sunlit, minimal design for modern cafés and Mediterranean concepts.', jinni:'jinni-template-olive.webp', quip:'Elegant. Minimal. See? You don’t need 47 colors to look expensive.' },
+  { id:'al-yamama', name:'Al Yamama', style:'Navy · Champagne · Gold', image:'template-al-yamama-plum.webp', description:'Timeless Arabian hospitality, with navy, champagne and golden details.', jinni:'jinni-template-yamama.webp', quip:'Traditional doesn’t mean outdated, darling. This isn’t 2009.' },
+  { id:'ocean-grill', name:'Ocean Grill', style:'Ocean Blue · Coral · White', image:'template-ocean-grill.webp', description:'Fresh ocean blue with refined seafood and coastal imagery.', jinni:'jinni-template-ocean.webp', quip:'Coastal luxury without the tacky clip-art fish. You’re welcome.' },
 ];
 
 const FEATURES = [
@@ -202,7 +202,7 @@ export default function RestaurantWebsites(){
    <Reveal className="jrw-templates-header"><div><span className="jrw-label">CHOOSE A STYLE THAT MATCHES YOUR RESTAURANT</span><h2>Beautiful Templates, <span>Made for You</span></h2><p>Four demo concepts, each ready to inspire a website customized to your restaurant and brand.</p></div><button type="button" className="jrw-btn jrw-btn-secondary jrw-header-cta" onClick={()=>ask()}>Create My Own Style <span>→</span></button></Reveal>
    <div className="jrw-template-grid">{TEMPLATES.map((t,i)=><Reveal
     key={t.id}
-    className={`jrw-template-card${activeTemplate===t.id?' is-jinni-active':''}`}
+    className={`jrw-template-card jrw-theme-${t.id}${activeTemplate===t.id?' is-jinni-active':''}`}
     style={{'--delay':`${i*.11}s`}}
     onPointerEnter={e=>{if(e.pointerType==='mouse')setActiveTemplate(t.id);}}
     onPointerLeave={e=>{if(e.pointerType==='mouse')setActiveTemplate(current=>current===t.id?null:current);}}
@@ -228,7 +228,7 @@ export default function RestaurantWebsites(){
       <button type="button" onClick={()=>ask(t.name)}>I Want This Style →</button>
      </div>
     </div>
-    <div className="jrw-template-body"><div><h3>{t.name}</h3><p>{t.style}</p></div><button type="button" className="jrw-template-arrow" onClick={()=>setPreview(t)} aria-label={`Explore ${t.name}`}>→</button></div>
+    <div className="jrw-template-body"><div><h3>{t.name}</h3><p>{t.style}</p><span className="jrw-palette" aria-label={`Colors: ${t.style}`}><i/><i/><i/></span></div><button type="button" className="jrw-template-arrow" onClick={()=>setPreview(t)} aria-label={`Explore ${t.name}`}>→</button></div>
     <button type="button" className="jrw-pick-style" onClick={()=>ask(t.name)}>I Want This Style ↗</button>
    </Reveal>)}</div>
    <p className="jrw-demo-disclosure">These are illustrative demo concepts, not examples of completed client projects.</p>

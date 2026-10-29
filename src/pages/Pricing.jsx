@@ -1,5 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+const WHOP_CHECKOUT = {
+  'first-look': 'https://whop.com/checkout/plan_qMuMe3KczduYK',
+  'one-time': {
+    'first-bite': 'https://whop.com/checkout/plan_SXdo8nWLP7H7V',
+    'main-course': 'https://whop.com/checkout/plan_ZQD8E8kGEv9FH',
+    'full-sufra': 'https://whop.com/checkout/plan_39bbWZ35NJfS9'
+  },
+  'monthly': {
+    'first-bite': 'https://whop.com/checkout/plan_Z5qke1c7SwN7H',
+    'main-course': 'https://whop.com/checkout/plan_NSztjPcNnn2x9',
+    'full-sufra': 'https://whop.com/checkout/plan_LKxqMam1CJIVo'
+  }
+};
 import './pricing.css';
 
 const oneTimePlans = [
@@ -63,6 +77,7 @@ const oneTimePlans = [
       'Facebook & Instagram setup + 8 launch posts',
       'One Meta launch campaign + 2 creatives',
       '2 months complimentary enhanced hosting',
+      'Google Business Profile setup or optimization',
       'Priority launch handover (ad spend separate)'
     ],
     cta: 'Explore This Plan'
@@ -104,7 +119,7 @@ const monthlyPlans = [
     features: [
       'Custom website + premium QR digital menu',
       'Free foundational SEO setup',
-      '8 designed posts + 2 edited Reels monthly',
+      '8 designed posts + 4 edited Reels monthly',
       'Instagram & Facebook management',
       'Menu updates + website care',
       'Monthly performance summary'
@@ -125,7 +140,7 @@ const monthlyPlans = [
     features: [
       'Advanced website + premium QR digital menu',
       'Free foundational SEO + website care',
-      '12 designed posts + 4 edited Reels monthly',
+      '12 designed posts + 6 edited Reels monthly',
       'Instagram & Facebook management',
       'One Meta campaign managed at no extra fee',
       'Google Business support + monthly report',
@@ -172,7 +187,7 @@ const compareRows = {
   ],
   monthly: [
     ['Website + Premium QR Menu', '●', '●', '●'],
-    ['Monthly Social Content', '4 posts', '8 posts + 2 Reels', '12 posts + 4 Reels'],
+    ['Monthly Social Content', '4 posts', '8 posts + 4 Reels', '12 posts + 6 Reels'],
     ['Menu Updates + Website Care', '●', '●', '●'],
     ['Meta Ads Management', '—', '—', 'One campaign included'],
     ['Monthly Reporting', '—', 'Summary', 'Full report']
@@ -262,7 +277,7 @@ function PlanCard({ plan, queryType = 'one-time' }) {
           <li key={feature}><span>✓</span>{feature}</li>
         ))}
       </ul>
-      <Link className={`gp-btn ${plan.featured ? 'gp-btn-gold' : 'gp-btn-outline'}`} to={`/contact?pricing=${queryType}&plan=${plan.id}`}>{plan.cta} <i>→</i></Link>
+      <a className={`gp-btn ${plan.featured ? 'gp-btn-gold' : 'gp-btn-outline'}`} href={WHOP_CHECKOUT[queryType][plan.id]}>{plan.cta} <i>→</i></a>
     </article>
   );
 }
@@ -316,7 +331,7 @@ export default function Pricing() {
             <p>Get a personalized website and premium QR menu concept preview within 7 days. Upgrade within 14 days of delivery and we'll credit your QAR 99 toward your package.</p>
             <small>A concept preview, not a completed website.</small>
           </div>
-          <Link className="gp-btn gp-btn-gold" to="/contact?pricing=first-look&plan=7-day-preview">Show Me the Magic <i>→</i></Link>
+          <a className="gp-btn gp-btn-gold" href={WHOP_CHECKOUT['first-look']}>Show Me the Magic <i>→</i></a>
         </section>
         <section className="gp-tabs-wrap" aria-label="Choose how we help your restaurant">
           <div className="gp-shell">

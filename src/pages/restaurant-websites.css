@@ -890,3 +890,36 @@
   .jrw-final .jrw-final-lamp-spark {animation:none!important}
   .jrw-final .jrw-final-lamp-spark {opacity:.6}
 }
+
+/* Avoid device and character art overflowing narrow screens; demo previews preserve the whole image. */
+.jrw-template-img>img{object-fit:contain!important;background:#f6eee4}
+@media(max-width:560px){.jrw-hero-visual{overflow:hidden}.jrw-devices{max-width:85%;right:-4%;width:310px}.jrw-jinni{left:0;width:min(57%,230px)}.jrw-hero-bubble{left:auto;right:4%;top:8px;width:min(43%,155px)}.jrw-template-img{aspect-ratio:4/3}.jrw-template-img>img{object-fit:contain!important}.jrw-preview-dialog{max-width:calc(100vw - 24px)}}
+
+/* Round 2: distinctive restaurant showroom identities and stable preview framing. */
+.jrw-template-card{--demo-main:#71303b;--demo-mid:#c67f56;--demo-light:#fff3e6;overflow:hidden;border-top:4px solid var(--demo-main)}
+.jrw-theme-spice-house{--demo-main:#731b34;--demo-mid:#ba7554;--demo-light:#fff0e8}
+.jrw-theme-olive-thyme{--demo-main:#72816a;--demo-mid:#bd8068;--demo-light:#f5f0de}
+.jrw-theme-al-yamama{--demo-main:#1e375e;--demo-mid:#bf9c6d;--demo-light:#fff3d9}
+.jrw-theme-ocean-grill{--demo-main:#176b9b;--demo-mid:#e17b65;--demo-light:#effaff}
+.jrw-template-card .jrw-template-visual{background:var(--demo-light)}
+.jrw-template-card .jrw-template-img{display:flex;justify-content:center;align-items:center;aspect-ratio:4/3;overflow:hidden;background:var(--demo-light)}
+.jrw-template-card .jrw-template-img>img{width:100%;height:100%;max-width:100%;object-fit:contain!important;object-position:center}
+.jrw-template-card .jrw-template-body{border-top:1px solid color-mix(in srgb,var(--demo-main) 17%,transparent)}
+.jrw-template-card .jrw-template-body h3{color:var(--demo-main)}
+.jrw-palette{display:flex;gap:5px;margin-top:9px}
+.jrw-palette i{width:16px;height:16px;border-radius:50%;border:1px solid #00000018;background:var(--demo-main)}
+.jrw-palette i:nth-child(2){background:var(--demo-mid)}
+.jrw-palette i:nth-child(3){background:var(--demo-light)}
+@media(max-width:620px){
+ .jrw-page .jrw-process{padding-top:29px!important;padding-bottom:28px!important}
+ .jrw-process .jrw-process-heading{margin-bottom:18px}
+ .jrw-process .jrw-steps{gap:11px}
+ .jrw-process .jrw-step-symbol{width:53px;height:53px;flex-basis:53px}
+ .jrw-process .jrw-lamp-experience{margin-top:0!important}
+ .jrw-process .jrw-enchanted-stage{height:405px!important}
+ .jrw-process .jrw-summon-character{width:min(169px,52%)!important;height:173px!important;top:2px!important}
+ .jrw-process .jrw-lamp-button{width:160px!important;height:160px!important;left:calc(50% - 80px)!important;bottom:32%!important}
+ .jrw-process .jrw-lamp-caption{bottom:105px!important}
+ .jrw-process .jrw-summon-message{bottom:6px!important}
+ .jrw-template-card .jrw-template-img{aspect-ratio:4/3!important}
+}

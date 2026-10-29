@@ -5,10 +5,10 @@ import DigitalMenuHero from './DigitalMenuHero.jsx';
 
 const A='/assets/';
 const templates=[
- {id:'classic',name:'Classic Gulf',sub:'Rich traditions, timeless elegance',image:'gdm-template-classic.webp',quip:'Ah, the classics. Good taste never goes out of style.'},
- {id:'elegant',name:'Modern Elegant',sub:'Clean, fresh and sophisticated',image:'gdm-template-elegant.webp',quip:'Modern, yes. But with proper manners. I approve.'},
+ {id:'classic',name:'Classic Gulf',sub:'Rich traditions, timeless elegance',image:'gdm-template-classic-coral.webp',quip:'Ah, the classics. Good taste never goes out of style.'},
+ {id:'elegant',name:'Modern Elegant',sub:'Clean, fresh and sophisticated',image:'gdm-template-elegant-blue.webp',quip:'Modern, yes. But with proper manners. I approve.'},
  {id:'dark',name:'Modern Dark',sub:'Bold, contemporary and immersive',image:'gdm-template-dark.webp',quip:'Dark and mysterious! I used to have a library like that.'},
- {id:'fresh',name:'Light & Fresh',sub:'Bright, airy and inviting',image:'gdm-template-fresh.webp',quip:'So refreshing, even my old bones feel young again.'},
+ {id:'fresh',name:'Light & Fresh',sub:'Bright, airy and inviting',image:'gdm-template-fresh-orange.webp',quip:'So refreshing, even my old bones feel young again.'},
 ];
 const features=[
  {title:'QR Menu Access',image:'gdm-feature-qr.webp',icon:'▦',desc:'Guests scan a QR code to discover your menu. No app download needed.'},
@@ -27,7 +27,7 @@ function useReveal(){
  React.useEffect(()=>{
   const items=document.querySelectorAll('.gdm-page .gdm-reveal');
   if(!('IntersectionObserver' in window)){items.forEach(x=>x.classList.add('gdm-visible'));return;}
-  const ob=new IntersectionObserver((entries)=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('gdm-visible');ob.unobserve(e.target)}},{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+  const ob=new IntersectionObserver((entries)=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('gdm-visible');ob.unobserve(e.target)}},{threshold:0,rootMargin:'120px 0px 120px 0px'});
   items.forEach(el=>ob.observe(el));return()=>ob.disconnect();
  },[]);
 }
