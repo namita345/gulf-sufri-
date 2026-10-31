@@ -35,7 +35,7 @@ export default function Contact(){
      <span className="gsc-kicker">✦ SAY AHLAN TO GULFSUFRA</span>
      <h1 id="gsc-title">Let's Talk<br/><em>Restaurant.</em><br/>We’re All Ears.</h1>
      <p>Building something new? Want to refresh your restaurant’s digital presence? Tell us what’s on your mind. No complicated forms, no confusing jargon.</p>
-     <div className="gsc-reach"><span className="gsc-reach-icon" aria-hidden="true">✉</span><div><small>DROP US A LINE</small><a href="mailto:yalla@gulfsufri.com">yalla@gulfsufri.com</a></div></div>
+     <div className="gsc-reach"><span className="gsc-reach-icon" aria-hidden="true">✉</span><div><small>DROP US A LINE</small><a href="mailto:yalla@gulfsufra.com">yalla@gulfsufra.com</a></div></div>
      <p className="gsc-note">Serving restaurant ideas across Qatar, Bahrain, Kuwait, and beyond. <span aria-hidden="true">✦</span></p>
      <div className="gsc-sufri"><img src="/assets/sufri-presenting.webp" alt="Sufri welcoming restaurant owners"/><span>“Tell me about your restaurant, habibi!”</span></div>
     </div>
@@ -49,7 +49,7 @@ export default function Contact(){
       <label>Package or starting point<select name="plan" value={form.plan} onChange={change}><option>Not sure yet</option>{Object.values(plans).map(s=><option key={s}>{s}</option>)}</select></label>
       <label>Tell us a little more<textarea name="message" value={form.message} onChange={change} placeholder="What would you like us to create? What do you want to improve?" maxLength="1700" rows="4"/></label>
       <label className="gsc-honeypot" aria-hidden="true">Leave this blank<input name="website" value={form.website} onChange={change} tabIndex={-1} autoComplete="off"/></label>
-      {error&&<div className="gsc-error" role="alert">{error} <a href="mailto:yalla@gulfsufri.com?subject=GulfSufra%20Inquiry">Email us instead ↗</a></div>}
+      {error&&<div className="gsc-error" role="alert">{error} <a href="mailto:yalla@gulfsufra.com?subject=GulfSufra%20Inquiry">Email us instead ↗</a></div>}
       <div className="gsc-form-bottom"><button className="gsc-btn gsc-btn-gold" type="submit" disabled={status==='sending'}>{status==='sending'?'Sending…':'Send My Inquiry'} <span aria-hidden="true">→</span></button><small>We'll only use your details to reply to your inquiry.</small></div>
      </form></>}
     </section>

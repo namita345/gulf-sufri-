@@ -72,7 +72,7 @@ function MenuInquiry({styleName,onClose}){
     <div className="gdm-form-pair"><label>Country<select name="country" value={data.country} onChange={update}>{countries.map(x=><option key={x}>{x}</option>)}</select></label><label>Preferred menu style<select name="template" value={data.template} onChange={update}><option>Not sure yet</option>{templates.map(x=><option key={x.id}>{x.name}</option>)}<option>Something custom</option></select></label></div>
     <label>Tell us about your menu (optional)<textarea rows="3" maxLength="2000" name="details" value={data.details} onChange={update} placeholder="Cuisine, number of dishes, languages or anything we should know"/></label>
     <label className="gdm-honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" onChange={update} value={data.website}/></label>
-    {err&&<p className="gdm-form-error" role="alert">{err} <a href="mailto:yalla@gulfsufri.com?subject=Digital%20Menu%20Inquiry">Email us instead</a></p>}
+    {err&&<p className="gdm-form-error" role="alert">{err} <a href="mailto:yalla@gulfsufra.com?subject=Digital%20Menu%20Inquiry">Email us instead</a></p>}
     <button className="gdm-button gdm-button-gold gdm-submit" type="submit" disabled={state==='loading'}>{state==='loading'?'Sending…':'Send My Menu Wish'} <span>→</span></button>
     <small>We only use these details to reply to your inquiry.</small>
    </form>

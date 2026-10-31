@@ -76,7 +76,7 @@ function SocialInquiry({onClose}) {
         <label>Main platform<select name="platform" value={data.platform} onChange={change}>{['Instagram','Facebook','TikTok','Multiple platforms','Not sure yet'].map(v=><option key={v}>{v}</option>)}</select></label></div>
         <label>What would you like help with?<textarea rows={3} name="details" maxLength={1800} value={data.details} onChange={change} placeholder="Content creation, reels, brand consistency, upcoming promotions..."/></label>
         <label className="gsm-honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} value={data.website} onChange={change} autoComplete="off"/></label>
-        {error&&<p role="alert" className="gsm-error">{error} <a href="mailto:yalla@gulfsufri.com?subject=Social%20Media%20Inquiry">Email us instead</a></p>}
+        {error&&<p role="alert" className="gsm-error">{error} <a href="mailto:yalla@gulfsufra.com?subject=Social%20Media%20Inquiry">Email us instead</a></p>}
         <button type="submit" className="gsm-btn gsm-btn-gold gsm-submit" disabled={sending}>{sending?'Sending…':'Send My Inquiry'} <span>→</span></button>
         <small>We’ll only use this information to respond to your inquiry.</small>
       </form>

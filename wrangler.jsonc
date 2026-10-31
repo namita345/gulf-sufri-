@@ -2,6 +2,10 @@
   "name": "gulf-sufri",
   "compatibility_date": "2026-10-24",
   "main": "worker/index.js",
+  "vars": {
+    "RESEND_FROM_EMAIL": "Gulf Sufra <forms@mail.gulfsufra.com>",
+    "INQUIRY_TO_EMAIL": "yalla@gulfsufra.com"
+  },
   "assets": {
     "directory": "./dist",
     "html_handling": "drop-trailing-slash",

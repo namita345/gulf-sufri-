@@ -1,6 +1,6 @@
 // Cloudflare Worker entrypoint. Static pages are served by Workers Static Assets;
 // only /api/* requests invoke this script before asset lookup.
-const recipient='yalla@gulfsufri.com';
+const fallbackRecipient='yalla@gulfsufra.com';
 const countries=new Set(['Qatar','Bahrain','Kuwait','Saudi Arabia','United Arab Emirates','Oman','Other']);
 const templates=new Set(['Not sure yet','The Spice House','Olive & Thyme','Al Yamama','Ocean Grill','Something custom','Classic Gulf','Modern Elegant','Modern Dark','Light & Fresh']);
 const services=new Set(['Restaurant Websites','Digital Menus','Social Media','Google Business','General Inquiry','Package Consultation']);
@@ -22,13 +22,15 @@ export default {
     if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return json({error:'Please enter a valid email address.'},400);
     if(phone&&!/^[+()\d .-]{6,35}$/.test(phone))return json({error:'Please check your WhatsApp number.'},400);
     if(!services.has(service)||!countries.has(country)||!templates.has(template))return json({error:'Please select an available country and template.'},400);
-    if(!env.RESEND_API_KEY||!env.RESEND_FROM_EMAIL)return json({error:'Online submissions are not enabled yet. Please email yalla@gulfsufri.com directly.'},503);
+    if(!env.RESEND_API_KEY||!env.RESEND_FROM_EMAIL)return json({error:'Online submissions are not enabled yet. Please email yalla@gulfsufra.com directly.'},503);
+    const recipient=field(env.INQUIRY_TO_EMAIL,200)||fallbackRecipient;
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient))return json({error:'Inquiry delivery address is not configured correctly.'},503);
     const fields=[['Service',service],['Restaurant',restaurant],['Contact',name],['Email',email||'Not supplied'],['WhatsApp',phone||'Not supplied'],['Country',country],['Preferred template',template],['Project notes',details||'None']];
     const html=`<div style="font-family:Arial,sans-serif;max-width:620px;margin:auto"><h2 style="color:#073c32">New GulfSufra inquiry</h2><p>A restaurant owner submitted an inquiry form.</p><table style="width:100%;border-collapse:collapse">${fields.map(([label,value])=>`<tr><td style="padding:10px;border-bottom:1px solid #ddd;font-weight:bold;vertical-align:top">${escapeHTML(label)}</td><td style="padding:10px;border-bottom:1px solid #ddd;white-space:pre-wrap">${escapeHTML(value)}</td></tr>`).join('')}</table></div>`;
     try{
       const res=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({from:env.RESEND_FROM_EMAIL,to:[recipient],reply_to:email||undefined,subject:`New ${service} Inquiry — ${restaurant}`,html})});
-      if(!res.ok){console.error('Resend inquiry failed',res.status);return json({error:'Your inquiry could not be delivered right now. Please try again or email yalla@gulfsufri.com.'},502)}
+      if(!res.ok){console.error('Resend inquiry failed',res.status);return json({error:'Your inquiry could not be delivered right now. Please try again or email yalla@gulfsufra.com.'},502)}
       return json({ok:true});
-    }catch(error){console.error('Inquiry delivery error',String(error));return json({error:'Your inquiry could not be delivered right now. Please email yalla@gulfsufri.com.'},502)}
+    }catch(error){console.error('Inquiry delivery error',String(error));return json({error:'Your inquiry could not be delivered right now. Please email yalla@gulfsufra.com.'},502)}
   }
 };

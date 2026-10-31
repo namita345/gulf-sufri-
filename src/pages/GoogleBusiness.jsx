@@ -77,7 +77,7 @@ function Inquiry({onClose}){
         <div className="gmb-form-pair"><label>Country<select name="country" value={data.country} onChange={change}>{countries.map(v=><option key={v}>{v}</option>)}</select></label><label>Google listing status<select name="profile" value={data.profile} onChange={change}><option>I already have a listing</option><option>I need a new profile</option><option>I'm not sure</option></select></label></div>
         <label>What would you like help with?<textarea rows={3} name="details" maxLength={1800} value={data.details} onChange={change} placeholder="Profile URL, opening hours, photos, reviews, or other goals..."/></label>
         <label className="gmb-honeypot" aria-hidden="true">Leave this blank<input name="website" tabIndex={-1} autoComplete="off" value={data.website} onChange={change}/></label>
-        {error&&<p className="gmb-form-error" role="alert">{error} <a href="mailto:yalla@gulfsufri.com?subject=Google%20Business%20Inquiry">Email us instead</a></p>}
+        {error&&<p className="gmb-form-error" role="alert">{error} <a href="mailto:yalla@gulfsufra.com?subject=Google%20Business%20Inquiry">Email us instead</a></p>}
         <button type="submit" disabled={status==='sending'} className="gmb-button gmb-gold gmb-submit">{status==='sending'?'Sending…':'Send My Inquiry'} <Icon name="arrow" size={18}/></button>
         <small>We only use these details to respond to your request.</small>
       </form>
